@@ -14,11 +14,13 @@
 #   http://en.wikipedia.org/wiki/Mortgage_calculator
 
 def pmt(rate, nper, pv)
-  # ============================================
-  # Your code to implement the method goes here.
-  # ============================================
+
+  monthly_payment = (rate.to_f * pv.to_f) / (1-((1+rate.to_f)**(-1 * nper.to_f)))
+
 end
+
+
 
 # Example usage of the method:
 
-# puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+#puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."

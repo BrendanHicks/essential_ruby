@@ -27,3 +27,14 @@ principal_amount = 100000.0
 # ====================
 # Your code goes here.
 # ====================
+
+loan_quotes.each do |quote|
+
+  monthly_payment = "#{pmt(quote["rate"],number_of_payments,principal_amount)}"
+    monthly_payment_rounded = monthly_payment.to_f.round(2)
+
+  puts "Your monthly payment at #{quote["bank"]} will be approximately #{monthly_payment_rounded}."
+
+
+end
+
